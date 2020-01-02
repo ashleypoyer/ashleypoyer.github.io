@@ -111,8 +111,9 @@ a {
   }
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    //color: $text-color;
+    //text-decoration: underline;
+    color: #3390ff;
   }
 
   .social-media-list &:hover {
@@ -146,12 +147,21 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
+/**pre,
 code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #f8f9f9;
+}
+*/
+pre,
+code {
+  font-family: $monospace-font-family;
+  font-size: 13px;
+  border: 1px solid $grey-color-light;
+  border-radius: 0px;
+  background-color: #f8f8f8;
 }
 
 code {
