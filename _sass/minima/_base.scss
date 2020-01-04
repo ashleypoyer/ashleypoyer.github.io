@@ -142,19 +142,26 @@ blockquote {
   }
 }
 
-
-
 /**
  * Code formatting
  */
-/**pre,
+
+
+/**
+
+original cell block format:
+
+pre,
 code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: #f8f9f9;
 }
+
 */
+
+
 pre,
 code {
   font-family: $monospace-font-family;
@@ -162,11 +169,13 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 0px;
-  background-color: #f8f8f8;
+  background-color: #eeeeee; // color of highlight over code (light grey) f3f9f9
 }
 
 code {
   padding: 1px 5px;
+  color: #E91E63;
+  //background-color: #f8f9f9;; // also highlight of code same color (light grey) blends in w background so probs unnecessary
 }
 
 pre {
@@ -177,9 +186,9 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    color: #000000;
   }
 }
-
 
 
 /**
