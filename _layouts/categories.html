@@ -1,0 +1,93 @@
+---
+layout: page
+title: Notebooks
+---
+
+<center>
+<img class="img" src="images/me_square.jpg" style="margin:45px; padding:45px;" height="300">
+</center>
+
+
+<div class="description"> Description of notebooks here.</div>
+
+<style>
+
+img {
+  border-radius: 50%;
+}
+
+
+div.description {
+  /* border-left: 4px solid #515A5A;
+  padding-left: 15px; */
+  margin-bottom: 100px;
+  margin-right: 80px;
+  margin-left: 80px;
+  text-align: justify;
+  color: #616A6B; /* #515A5A; #424949 */
+}
+
+
+
+h5 { color: #F90B6D; font-family: 'Open Sans', sans-serif; font-size: 54px; font-weight: 300; line-height: 40px; margin: 0 0 16px; }
+
+
+.category-head {
+	color: #F90B6D; 
+	/* color: #2196F3; */
+	/* text-align: center; */
+	text-decoration-color: #000000;
+	/* text-decoration: underline;
+	text-decoration-style: bold;
+  -webkit-text-underline-position: under;
+  -ms-text-underline-position: below;
+  text-underline-position: under; */
+
+
+}
+
+.space { margin-top: 100px; }
+
+</style>
+
+<div class="space"></div> 
+
+<div id="archives">
+{% for category in site.categories %}
+  <div class="archive-group">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="#{{ category_name | slugize }}"></div>
+    <p></p>
+    <h5 class="category-head">{{ category_name }}</h5>
+
+    <a  name="{{ category_name | slugize }}"></a>
+  	{% for post in site.categories[category_name] %}
+
+  	<br>
+
+    <ul class="post-list">
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h1>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h1>
+
+        <div class="text-justify">
+          {{ post.description }}
+        </div>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+    </ul>
+
+    {% endfor %}
+    <br> <hr>  <!-- category divider -->
+
+    <div class="space"></div> <!-- adding space inbetween categories -->
+  </div>
+{% endfor %}
+</div>

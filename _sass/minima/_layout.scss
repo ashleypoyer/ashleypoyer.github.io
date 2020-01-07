@@ -4,7 +4,7 @@
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 1.865;
+  min-height: $spacing-unit *1.865;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -22,6 +22,7 @@
   &:visited {
     color: $grey-color-dark;
   }
+
 }
 
 .site-nav {
@@ -36,16 +37,25 @@
     display: none;
   }
 
+
   .page-link {
     @include relative-font-size(1.4);
     color: $text-color;
     line-height: $base-line-height;
 
+
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
     }
+
+    // changed page link did not affect post links
+    &:hover {
+      color: #1291f0;
+    }
+
   }
+
 
   @include media-query($on-palm) {
     position: absolute;
@@ -208,6 +218,11 @@
   display: block;
   //@include relative-font-size(1.5);
   font-size: 32px;
+
+  // underline post links did not affect page links
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 

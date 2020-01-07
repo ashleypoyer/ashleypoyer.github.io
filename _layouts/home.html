@@ -2,15 +2,23 @@
 layout: default
 ---
 
+
+<center>
+<img src="images/profile.jpg" style="margin:45px; padding:45px;" height="450" alt="what a pic!">
+</center>
+
+
 <div class="home">
+  <!-- 
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  {%- endif -%} -->
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Notebooks" }}</h2>
+
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>

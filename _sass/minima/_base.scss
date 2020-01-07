@@ -14,7 +14,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{20px}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -110,17 +110,18 @@ a {
     color: darken($brand-color, 15%);
   }
 
+  // changed post link
   &:hover {
     //color: $text-color;
+    //color: #1291f0;
     text-decoration: underline;
-    color: #1291f0;
   }
 
   .social-media-list &:hover {
     text-decoration: none;
 
     .username {
-      text-decoration: underline;
+      //text-decoration: underline;
     }
   }
 }
@@ -169,13 +170,12 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 0px;
-  background-color: #eeeeee; // color of highlight over code (light grey) f3f9f9
+  background-color: #fAfAfA; 
 }
 
 code {
   padding: 1px 5px;
-  color: #E91E63;
-  //background-color: #f8f9f9;; // also highlight of code same color (light grey) blends in w background so probs unnecessary
+  color: #FF3366; //#FF0066;
 }
 
 pre {

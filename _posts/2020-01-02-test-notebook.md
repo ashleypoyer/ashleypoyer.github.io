@@ -4,9 +4,62 @@ title:  "A Test Post Made from a Jupyter Notebook"
 mathjax: true
 date:   2020-01-01 14:03:14 -0500
 description: This is a post made from a jupyter notebook. Come check this out!
-categories: notebooks 
+categories: [machine learning]
 ---
+<style>
+.equation {
+  width: 30px;
+  padding: 10px;
+  border: 2px solid gray;
+  background-color: #FFF59D;
+  margin: 0;
+}
 
+.borderexample {
+ border-style:solid;
+ border: 2px solid gray;
+ background-color: #FFF59D;
+}
+
+.test {
+  width:150px;
+  margin: auto;
+  border-style:solid;
+  border: 2px solid gray;
+  background-color: #FFF9C4;
+}
+
+
+.test2 {
+
+     background-color: #f0f7fb;
+     border-left: solid 4px #3498db;
+     line-height: 18px;
+     mc-auto-number-format: '{b}Note: {/b}';
+     overflow: hidden;
+     padding: 12px;
+}
+
+
+
+.test4 {
+  width:300px;
+  margin: auto;
+  /* border-style:solid;
+  border: 2px solid #F7DC6F; */
+  background-color: #FFFFCC; /*#FFF9C4; */
+}
+
+
+.test5 {
+  width:500px;
+  margin: auto;
+  /*border-style:solid;
+  border: 2px solid #F7DC6F; */
+  background-color: #FFFFCC;
+}
+
+</style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
@@ -70,7 +123,7 @@ y_n
 \end{gather*}
 $$
 
-<div lang="latex">x_i + y_j</div>
+
 
 ```python
 import numpy as np
@@ -117,25 +170,27 @@ Let's test out MathJax!:
 
 Given our objective function 
 
-$$S\left(\hat{\alpha}, \hat{\beta} \right ) = \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} \left ( \varepsilon_{i} \right )^{2}$$ 
+$$S\left(\widehat{\alpha}, \widehat{\beta} \right ) = \min_{\widehat{\alpha}, \widehat{\beta}} \sum_{i=1}^{n} \left ( \varepsilon_{i} \right )^{2}$$ 
 
 we can solve for $$\alpha$$ and $$\beta$$ as follows:
 
 
-$$S\left(\hat{\alpha}, \hat{\beta} \right ) =  \min_{\hat{\alpha}, \hat{\beta}} \sum_{i=1}^{n} \left (y_{i} - \hat{\alpha} - \hat{\beta}\cdot x_{i} \right)^2$$
+$$S\left(\widehat{\alpha}, \widehat{\beta} \right ) =  \min_{\widehat{\alpha}, \widehat{\beta}} \sum_{i=1}^{n} \left (y_{i} - \widehat{\alpha} - \widehat{\beta}\cdot x_{i} \right)^2$$
 
 
-$$\frac{\partial S\left(\hat{\alpha}, \hat{\beta} \right )}{\partial\alpha} = -2 \sum_{i=1}^{n} \left (y_{i} - \hat{\alpha} - \hat{\beta}\cdot x_{i} \right) = 0$$
+$$\frac{\partial S\left(\widehat{\alpha}, \widehat{\beta} \right )}{\partial\alpha} = -2 \sum_{i=1}^{n} \left (y_{i} - \widehat{\alpha} - \widehat{\beta}\cdot x_{i} \right) = 0$$
 
-$$\hat{\alpha }= \bar{y} - \hat{\beta} \cdot \bar{x}$$
-
-
-$$\frac{\partial S\left(\hat{\alpha}, \hat{\beta} \right )}{\partial\beta} = -2 \sum_{i=1}^{n} \left (y_{i} - \hat{\alpha} - \hat{\beta}\cdot x_{i} \right)\cdot x_{i} = 0$$
+<div class="test4"> $$\widehat{\alpha }= \bar{y} - \widehat{\beta} \cdot \bar{x}$$ </div>
 
 
-$${\hat {\beta }}={\frac {\sum {x_{i}y_{i}}-{\frac {1}{n}}\sum {x_{i}}\sum {y_{i}}} {\sum {x_{i}^{2}}-{\frac {1}{n}}(\sum {x_{i}})^{2}}} = {\frac {\operatorname {Cov} [x,y]}{\operatorname {Var} [x]}}$$
+$$\frac{\partial S\left(\widehat{\alpha}, \widehat{\beta} \right )}{\partial\beta} = -2 \sum_{i=1}^{n} \left (y_{i} - \widehat{\alpha} - \widehat{\beta}\cdot x_{i} \right)\cdot x_{i} = 0$$
 
-## <font color=k> scikit-learn Implementation (OLS) </font>
+
+<div class="test5"> $${\widehat {\beta }}={\frac {\sum {x_{i}y_{i}}-{\frac {1}{n}}\sum {x_{i}}\sum {y_{i}}} {\sum {x_{i}^{2}}-{\frac {1}{n}}(\sum {x_{i}})^{2}}} = {\frac {\operatorname {Cov} [x,y]}{\operatorname {Var} [x]}}$$ </div>
+
+<br>
+
+## scikit-learn Implementation (OLS)
 
 
 ```python
