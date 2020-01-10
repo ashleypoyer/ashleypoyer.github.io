@@ -3,7 +3,7 @@ layout: post
 title:  "Polynomial Regression and Regularization"
 mathjax: true
 date:   2019-08-16
-description: description here.
+description: Polynomial regression and the overfitting problem. Demonstrating the effect of Ridge and Lasso regularization methods. 
 categories: [Machine Learning]
 ---
 
@@ -19,9 +19,6 @@ p.code {
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
-## Polynomial Regression <br>
 
 
 <br> The polynomial regression model: 

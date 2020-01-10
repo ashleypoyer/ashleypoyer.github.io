@@ -3,7 +3,7 @@ layout: post
 title:  "Schema Matching"
 mathjax: true
 date:   2019-10-18 
-description: description here.
+description: An abstract overview of schema matching concepts. Using name-based and instance-based matchers to determine the potential element matches for a given pair of schemas. 
 categories: [Data Integration]
 ---
 

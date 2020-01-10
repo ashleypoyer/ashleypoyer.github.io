@@ -3,7 +3,7 @@ layout: post
 title:  "String Similarity Algorithms"
 mathjax: true
 date:   2019-10-06 
-description: description here.
+description: Introduction to string similarity algorithms. Starting with N-grams and Jaccard Similarity. Then writing the Levenshtein Distance algorithm using NumPy and finally computing Edit Similarity.
 categories: [Miscellaneous]
 ---
 

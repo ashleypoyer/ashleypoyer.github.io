@@ -3,7 +3,7 @@ layout: post
 title:  "Linear Perceptron Algorithm from Scratch"
 mathjax: true
 date:   2019-11-05 
-description: description here.
+description: Implementing the linear perceptron algorithm from scratch on a toy two-dimensional dataset. Visualizing the decision boundary of the perceptron after each epoch until convergence.
 categories: [Machine Learning]
 ---
 

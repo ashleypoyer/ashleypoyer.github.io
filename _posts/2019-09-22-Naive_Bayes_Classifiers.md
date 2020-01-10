@@ -3,7 +3,7 @@ layout: post
 title:  "Naive Bayes Classifiers"
 mathjax: true
 date:   2019-09-22 
-description: description here.
+description: How Naive Bayes classifiers work and implementing some common variants, Gaussian, Bernoulli, and Multinomial. Using term-frequency (tf) and term frequency-inverse document frequency (tf-idf) vectors with Multinomial Naive Bayes. Lastly, an example on classifying Amazon product reviews.
 categories: [Machine Learning]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Gradient Descent Variants"
 mathjax: true
 date:   2019-08-05
-description: description here.
+description: Overview of Gradient Descent variants Batch, Stochastic, and Mini-Batch. Visualizing the convergence path of each of these methods.
 categories: [Machine Learning]
 ---
 
