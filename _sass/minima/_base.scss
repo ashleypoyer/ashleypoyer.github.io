@@ -12,9 +12,10 @@ dl, dd, ol, ul, figure {
 
 /**
  * Basic styling
- */
+*/
+
 body {
-  font: $base-font-weight #{20px}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{18px}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -28,6 +29,18 @@ body {
   flex-direction: column;
 }
 
+
+/*
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+}
+*/
 
 
 /**
@@ -94,7 +107,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  //font-weight: $base-font-weight;
+  font-weight: 400;
 }
 
 
@@ -148,45 +162,46 @@ blockquote {
  */
 
 
-/**
-
-original cell block format:
-
 pre,
 code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #f8f9f9;
+  background-color: #eeeeee;
+  font-size: 17px
 }
 
-*/
 
-
+/*
 pre,
 code {
   font-family: $monospace-font-family;
   //font-size: 13px;
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
-  border-radius: 0px;
-  background-color: #fAfAfA; 
+  border-radius: 3px;
+  background-color: #f1f1f1;
 }
+*/
+
 
 code {
   padding: 1px 5px;
   color: #FF3366; //#FF0066;
+  background-color: #fafafa; // background color for inline code
 }
 
 pre {
   padding: 8px 12px;
   overflow-x: auto;
+  //background-color: #000000;
 
   > code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
     color: #000000;
+    background-color: #eeeeee; // background color for code in cell blocks, ** should MATCH color of cell block specified above **
   }
 }
 

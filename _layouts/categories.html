@@ -29,16 +29,18 @@ div.description {
 
 
 
-h5 { color: #F90B6D; font-family: 'Open Sans', sans-serif; font-size: 54px; font-weight: 300; line-height: 40px; margin: 0 0 16px; }
+h5 { font-family: 'Helvetica Neue', sans-serif; font-size: 50px; font-weight: 300; line-height: 40px; margin: 0 0 16px; text-align: center;}
 
 
 .category-head {
-	color: #F90B6D; 
-	/* color: #2196F3; */
-	/* text-align: center; */
+	/* color: #F90B6D; */
+  /*color: #0277BD; */
+  /* color: #1976D2; */
+  color: #336699; 
+	text-align: center; 
 	text-decoration-color: #000000;
 	/* text-decoration: underline;
-	text-decoration-style: bold;
+	text-decoration-style: bold; 
   -webkit-text-underline-position: under;
   -ms-text-underline-position: below;
   text-underline-position: under; */
@@ -58,12 +60,12 @@ h5 { color: #F90B6D; font-family: 'Open Sans', sans-serif; font-size: 54px; font
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
-    <h5 class="category-head">{{ category_name }}</h5>
+    <h5 class="category-head">{{ category_name }}</h5> <br> 
 
     <a  name="{{ category_name | slugize }}"></a>
   	{% for post in site.categories[category_name] %}
 
-  	<br>
+  	<br> 
 
     <ul class="post-list">
       <li>
@@ -85,7 +87,7 @@ h5 { color: #F90B6D; font-family: 'Open Sans', sans-serif; font-size: 54px; font
     </ul>
 
     {% endfor %}
-    <br> <hr>  <!-- category divider -->
+    <br> <hr> <!-- category divider -->
 
     <div class="space"></div> <!-- adding space inbetween categories -->
   </div>

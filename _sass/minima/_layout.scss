@@ -51,7 +51,8 @@
 
     // changed page link did not affect post links
     &:hover {
-      color: #1291f0;
+      // color: #1291f0;
+      color: #336699;
     }
 
   }
@@ -206,6 +207,7 @@
 
   > li {
     margin-bottom: $spacing-unit;
+    font-size: 18px; // post descriptions
   }
 }
 
@@ -217,7 +219,7 @@
 .post-link {
   display: block;
   //@include relative-font-size(1.5);
-  font-size: 32px;
+  font-size:34px; // post-titles
 
   // underline post links did not affect page links
   &:hover {
@@ -238,6 +240,7 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  font-weight: 300;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
