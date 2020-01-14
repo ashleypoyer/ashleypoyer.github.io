@@ -1,0 +1,50 @@
+<style>
+
+/* Share buttons */
+.sharebuttons {
+  margin: 0 auto 0 auto;
+}
+
+.sharebuttons ul {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+.sharebuttons ul li {
+  display: inline;
+  padding: 10px;
+}
+
+.sharebuttons ul li a {
+  text-decoration: none;
+}
+
+.sharebuttons ul li svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+</style>
+
+
+<div class="sharebuttons">
+  <ul>
+    <li class="email">
+      <a href="mailto:aap25@psu.edu">
+        {% include social/envelope-square-solid.svg %}
+        <span style="font-size: 16px"> Email </span>
+      </a>
+    </li>
+    <li class="github">
+      <a href="https://github.com/ashleypoyer" target="_blank">
+        {% include social/github-brands.svg %}
+        <span style="font-size: 16px"> GitHub </span>
+      </a>
+    </li>
+    <li class="city">
+        {% include social/map-marker-alt-solid.svg %}
+        <span style="font-size: 16px"> Washington, D.C. </span>
+    </li>
+  </ul>
+</div>
