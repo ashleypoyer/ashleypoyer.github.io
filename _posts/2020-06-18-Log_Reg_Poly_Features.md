@@ -137,10 +137,8 @@ acc = model.score(poly_feat,y)
 print("Model Accuracy: {}".format(acc))
 ```
 
-<p class="code">
-Model fitting to polynomial features...
-Model Accuracy: 1.0
-</p>
+<p class="code"> Model fitting to polynomial features... <br>
+Model Accuracy: 1.0 </p>
 
 
 
