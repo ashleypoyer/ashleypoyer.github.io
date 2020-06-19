@@ -39,7 +39,7 @@
 
 
   .page-link {
-    @include relative-font-size(1.4);
+    @include relative-font-size(1.5);
     color: $text-color;
     line-height: $base-line-height;
 
@@ -209,19 +209,20 @@
 
   > li {
     margin-bottom: $spacing-unit;
-    font-size: 18px; // post descriptions
+    font-size: 0px; // post descriptions
   }
 }
 
 .post-meta {
-  font-size: $small-font-size;
+  font-size: 16px; // post date
   color: $grey-color;
+
 }
 
 .post-link {
   display: block;
   //@include relative-font-size(1.5);
-  font-size:34px; // post-titles
+  font-size:28px; // post-titles
 
   // underline post links did not affect page links
   &:hover {
