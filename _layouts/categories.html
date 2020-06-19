@@ -32,43 +32,66 @@ div.description {
 
 
 
-h5 { font-family: 'Helvetica Neue', sans-serif; font-size: 50px; font-weight: 300; line-height: 40px; margin: 0 0 16px; text-align: center;}
+h5 { font-family: 'Helvetica Neue', sans-serif; font-size: 46px; font-weight: 300; line-height: 40px; margin: 0 0 16px; text-align: center;}
 
 
 .category-head {
 	/* color: #F90B6D; */
-  /*color: #0277BD; */
+  /* color: #0277BD; */
+  color: #0272B6;
   /* color: #1976D2; */
-  color: #336699; 
-	text-align: center; 
-	text-decoration-color: #000000;
+  /* color: #336699; */
+	text-align: left; 
+	text-decoration-color: #000000; 
 	/* text-decoration: underline;
 	text-decoration-style: bold; 
   -webkit-text-underline-position: under;
   -ms-text-underline-position: below;
-  text-underline-position: under; */
+  text-underline-position: under; */ }
 
 
-}
-
-.space { margin-top: 100px; }
+.space { margin-top: 50px; }
 
 </style>
 
 <div class="space"></div> 
 
 <div id="archives">
-{% for category in site.categories %}
+<!-- very convoluted way of doing this b/c liquid is terrible... -->
+
+{% assign list = "" %}
+{% for cat in site.categories %}
+    {% assign list = list | append: cat[0] | append: ',' %}
+{% endfor %}
+
+{% assign new_list = list | split: ',' %}
+
+{% assign result = new_list.last | append: ',' %}
+{% assign result = result | append: new_list.first | append: ',' %}
+{% assign result = result | append: new_list[2] | append: ',' %}
+{% assign result = result | append: new_list[1] %}
+
+{% assign new_result = result | split: ',' %}
+
+<!-- to make sure categories were stored properly
+{{ new_result }}
+
+{% for cat in new_result %}
+    <li>{{ cat }}</li>
+{% endfor %}
+-->
+
+<!-- to revert, iterate over site.categories -->
+{% for category in new_result %}
   <div class="archive-group">
-    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <!-- {% capture category_name %}{{ category | first }}{% endcapture %} -->
+    {% capture category_name %}{{ category }}{% endcapture %} 
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
     <h5 class="category-head">{{ category_name }}</h5> <br> 
 
     <a  name="{{ category_name | slugize }}"></a>
   	{% for post in site.categories[category_name] %}
-
-  	<br> 
 
     <ul class="post-list">
       <li>
